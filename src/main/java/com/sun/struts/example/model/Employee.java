@@ -12,17 +12,18 @@ public class Employee implements Serializable {
 
     private String lastName;
 
-
+    private byte[] image;
 
 
     public Employee() {
     }
 
-    public Employee(Integer employeeId, String firstName, String lastName, Integer age) {
+    public Employee(Integer employeeId, String firstName, String lastName, Integer age, byte[] image) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.image = image;
     }
 
     public Integer getEmployeeId() {
@@ -56,5 +57,9 @@ public class Employee implements Serializable {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+    public byte[] getImage(){return image; }
+
+    public void setImage(byte[] image){this.image = image;}
 
 }

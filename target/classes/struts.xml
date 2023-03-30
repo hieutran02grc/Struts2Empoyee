@@ -19,13 +19,27 @@
 
         <default-action-ref name="index"/>
 
-        <action name="index" class="com.sun.struts.example.action.EmployeeAction" method="list">
-            <result name="success">/WEB-INF/jsp/employees.jsp</result>
-            <interceptor-ref name="basicStack"/>
+        <action name="image" class="com.sun.struts.example.action.ImageAction">
+            <result name="success" type="stream">
+                /WEB-INF/jsp/loadImage.jsp
+                <param name="contentType">image/jpeg</param>
+                <param name="inputName">imageStream</param>
+            </result>
+            <result name="error">/error.jsp</result>
         </action>
-        <action name="*Employee" class="com.sun.struts.example.action.EmployeeAction" method="{1}">
-            <result name="success" type="redirectAction">index</result>
-            <result name="input">/WEB-INF/jsp/employeeForm.jsp</result>
-        </action>
+
+<!--        <action name="index" class="com.sun.struts.example.action.EmployeeAction" method="list">-->
+<!--            <result name="success">/WEB-INF/jsp/employees.jsp</result>-->
+<!--            <interceptor-ref name="basicStack"/>-->
+<!--        </action>-->
+<!--        <action name="*Employee" class="com.sun.struts.example.action.EmployeeAction" method="{1}">-->
+<!--            <result name="success" type="redirectAction">index</result>-->
+<!--            <result name="input">/WEB-INF/jsp/employeeForm.jsp</result>-->
+<!--        </action>-->
+<!--        <action name="loadImg" class="com.sun.struts.example.action.ImageAction">-->
+<!--            <result name="success" type="stream"> <param name="contentType">image/jpeg</param></result>-->
+<!--            <param name="imagePath">${param.imagePath}</param>-->
+<!--            <result name="input">/WEB-INF/jsp/employeeForm.jsp</result>-->
+<!--        </action>-->
     </package>
 </struts>

@@ -16,6 +16,7 @@
         <th><s:text name="label.firstName"/></th>
         <th><s:text name="label.lastName"/></th>
         <th><s:text name="label.age"/></th>
+        <th><s:text name="Img"/></th>
         <th> </th>
     </tr>
     <s:iterator value="employees" status="status">
@@ -23,6 +24,15 @@
             <td class="nowrap"><s:property value="firstName"/></td>
             <td class="nowrap"><s:property value="lastName"/></td>
             <td class="nowrap"><s:property value="age"/></td>
+            <td class="nowrap"><s:property value="image"/></td>
+            <td class="nowrap"><img src=""></td>
+            <td class="nowrap"><img src="data:image/jpeg;base64,${javax.xml.bind.DatatypeConverter.printBase64Binary(imageData)}" alt="Goten">
+
+            </td>
+<%--            <td class="nowrap"> <img src="file:///C:/Users/hieut/OneDrive/Pictures/memes/lophoc.jpg"/></td>--%>
+<%--            <td class="nowrap"> <img src="file:\\\C:\Users\hieut\OneDrive\Desktop\hieuxuog\anh\goten.jpg"/>--%>
+<%--            <td class="nowrap"><img src="data:image/jpeg;base64,${Base64.getEncoder().encodeToString(imageData)}" alt="Image" /></td>--%>
+
             <td class="nowrap">
                 <s:url action="inputEmployee" id="url">
                     <s:param name="employee.employeeId" value="employeeId"/>

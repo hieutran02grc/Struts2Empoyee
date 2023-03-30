@@ -14,11 +14,15 @@ public class EmployeeAction extends ActionSupport implements Preparable {
     private Employee employee;
     private List employees;
 
+
+
     @Override
     public void prepare() throws Exception {
         if (employee != null && employee.getEmployeeId() != null) {
             employee = empService.getEmployee(employee.getEmployeeId());
         }
+
+
     }
 
     public String save() {
