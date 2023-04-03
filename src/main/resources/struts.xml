@@ -28,6 +28,15 @@
             <result name="error">/error.jsp</result>
         </action>
 
+        <action name="video" class="com.sun.struts.example.action.VideoAction">
+            <result name="success" type="stream">
+                /WEB-INF/jsp/loadVid.jsp
+                <param name="contentType">video/mp4</param>
+                <param name="inputName">imageStream</param>
+            </result>
+            <result name="error">/error.jsp</result>
+        </action>
+
 <!--        <action name="index" class="com.sun.struts.example.action.EmployeeAction" method="list">-->
 <!--            <result name="success">/WEB-INF/jsp/employees.jsp</result>-->
 <!--            <interceptor-ref name="basicStack"/>-->

@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="struts-example" />
         <module name="FileAnhStrust2" />
+        <module name="Struts2Empoyee" />
       </profile>
     </annotationProcessing>
   </component>
